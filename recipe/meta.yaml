@@ -21,6 +21,7 @@ requirements:
     - jupyter-packaging =0.10
   run:
     - python >=3.6
+    - meshio >=5
 
 test:
   imports:
