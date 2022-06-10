@@ -18,7 +18,7 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - jupyter-packaging =0.10
+    - jupyter-packaging >=0.12
   run:
     - python >=3.6
     - meshio >=5
