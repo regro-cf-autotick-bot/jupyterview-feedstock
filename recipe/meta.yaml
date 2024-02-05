@@ -1,5 +1,5 @@
 {% set name = "jupyterview" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc0cac5ecc4c609acd79d03ee55b8683601ba3d3c860d35f9769e2de9071b63d
+  sha256: 0e887e129838fba3fcdfd81f19f9fe2c8c56c2f51900617467973fe76f7115c4
 
 build:
   noarch: python
