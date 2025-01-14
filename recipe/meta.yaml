@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0e887e129838fba3fcdfd81f19f9fe2c8c56c2f51900617467973fe76f7115c4
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.5.0
     - jupyterlab >=4.0.0,<5
     - hatch-nodejs-version
@@ -24,10 +24,12 @@ requirements:
     - pip
   run:
     - meshio >=5
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyter_server >=2.0.1,<3
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - jupyterview
 
